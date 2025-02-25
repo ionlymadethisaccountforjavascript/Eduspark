@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .App {
   text-align: center;
 }
@@ -14,7 +16,7 @@
 }
 
 /* loading page */
-.App-header {
+/* .App-header {
   position: absolute;
   width: 390px;
   height: 844px;
@@ -22,21 +24,21 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background: #007BFF;
-}
+} */
 
-.EduLogo_Loading {
+/* .EduLogo_Loading {
   position: absolute;
   width: 168.2px;
   height: 108px;
-  left: calc(50% - 168.2px/2 + 0.1px);
-  top: calc(50% - 108px/2 - 54px);
-}
+  left: 111px;
+  top: 314px;
+}  */
 
-.EduSparkText_Loading {
+/* .EduSparkText_Loading {
   position: absolute;
   width: 347px;
   height: 40px;
-  left: calc(50% - 347px/2 + 2.5px);
+  left: 24px;
   top: 422px;
 
   font-family: 'Plus Jakarta Sans';
@@ -49,10 +51,10 @@
 
   color: #FFFFFF;
   border: 1px solid #007BFF;
-}
+} */ */
 
 /* Sign up page */
-.App-header2 {
+/* .App-header2 {
   position: absolute;
   width: 390px;
   height: 844px;
@@ -64,17 +66,17 @@
   border-color: rgb(0, 0, 0);
   background: #ffffff;
 
-}
+} */
 
-.Arrow {
+/* .Arrow {
   position: absolute;
   width: 24px;
   height: 24px;
   left: 21px;
   top: 65px;
-}
+} */
 
-.Facebook_SignButton {
+/* .Facebook_SignButton {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -102,9 +104,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
-.Google_SignButton {
+/* .Google_SignButton {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -132,9 +134,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
-.Create_your_account_txt {
+/* .Create_your_account_txt {
   position: absolute;
   width: 319px;
   height: 65px;
@@ -151,9 +153,9 @@
   text-transform: capitalize;
 
   color: #6C6C6C;
-}
+} */
 
-.SignTextTitle {
+/* .SignTextTitle {
   position: absolute;
   width: 347px;
   height: 40px;
@@ -168,9 +170,9 @@
   letter-spacing: 0.05em;
 
   color: #007BFF;
-}
+} */
 
-.SignTxtLink {
+/* .SignTxtLink {
   position: absolute;
   width: 225px;
   height: 15px;
@@ -197,9 +199,9 @@
   text-decoration-thickness: Auto;
   color: #007BFF;
 
-}
+} */
 
-#LineSignUp1 {
+/* #LineSignUp1 {
   position: absolute;
   width: 75px;
   height: 0px;
@@ -207,9 +209,9 @@
   top: 534px;
   border: 1px solid #6C6C6C;
   transform: rotate(180deg);
-}
+} */
 
-#LineSignUp2 {
+/* #LineSignUp2 {
   position: absolute;
   width: 75px;
   height: 0px;
@@ -217,9 +219,9 @@
   top: 534px;
   border: 1px solid #6C6C6C;
   transform: rotate(180deg);
-}
+} */
 
-#OrSignUpWith {
+/* #OrSignUpWith {
   position: absolute;
   width: 200px;
   height: 18px;
@@ -234,9 +236,9 @@
   letter-spacing: 0.02em;
 
   color: #007BFF;
-}
+} */
 
-.SignUp-Header {
+/* .SignUp-Header {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 500;
@@ -246,34 +248,34 @@
 
   color: #007BFF;
 
-}
+} */
 
-#ConfirmPassword_SU {
+/* #ConfirmPassword_SU {
   position: absolute;
   width: 117px;
   height: 16px;
   left: 28px;
   top: 325px;
-}
+} */
 
-.Email_INPUT {
+/* .Email_INPUT {
   position: absolute;
   width: 35px;
   height: 16px;
   left: 31px;
   top: 171px;
 
-}
+} */
 
-.Password_INPUT {
+/* .Password_INPUT {
   position: absolute;
   width: 63px;
   height: 16px;
   left: 31px;
   top: 252px;
-}
+} */
 
-.EmailBox_Input {
+/* .EmailBox_Input {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -298,9 +300,9 @@
   order: 0;
   flex-grow: 0;
 
-}
+} */
 
-.PasswordBox_Input {
+/* .PasswordBox_Input {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -324,9 +326,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
-#ConfirmPasswordSignUp_Input {
+/* #ConfirmPasswordSignUp_Input {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -335,7 +337,7 @@
   position: absolute;
   width: 300px;
   height: 18px;
-  left: calc(50% - 320px/2 - 4px);
+  left: 30px;
   top: 357px;
   border: 1px solid #6C6C6C;
   border-radius: 5px;
@@ -351,9 +353,9 @@
   order: 0;
   flex-grow: 0;
 
-}
+} */
 
-.SignButton {
+/* .SignButton {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -380,7 +382,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
 /* Question page */
 .Question {
@@ -623,7 +625,7 @@
 }
 
 /* SignIn page */
-.ForgotPassword {
+/* .ForgotPassword {
   position: absolute;
   width: 120px;
   height: 14px;
@@ -636,11 +638,11 @@
   line-height: 14px;
   letter-spacing: 0.02em;
   color: #6C6C6C;
-}
+} */
 
-.SignButton[name="signIn"] {
+/* .SignButton[name="signIn"] {
   top: 390px;
-}
+} */
 
 .App-link {
   color: #61dafb;

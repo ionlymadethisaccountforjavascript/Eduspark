@@ -9,9 +9,9 @@ import "./App.css";
 function LoadingPage() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="EduSparkText_Loading">EduSpark</h1>
-        <img src={EduLogo} className="EduLogo_Loading" alt="EduSpark Logo" />
+      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 bg-[#007BFF]">
+        <h1 class="absolute w-[347px] h-[40px] left-[24px] top-[422px] font-['Plus_Jakarta_Sans'] not-italic font-black text-[32px] leading-[40px] text-center tracking-wider text-[#FFFFFF] border-[1px] border-[solid] border-[#007BFF]">EduSpark</h1>
+        <img src={EduLogo} class="absolute w-[168.2px] h-[108px] left-[111px] top-[314px]" alt="EduSpark Logo" />
       </header>
     </div>
   );
@@ -20,17 +20,17 @@ function LoadingPage() {
 function SignUp() {
   return (
     <div className="App">
-      <header className="App-header2">
-        <img src={Arrow} className="Arrow" id="Arrow_Signup"/>
-        <img src={LineSignUp} id="LineSignUp1" />
-        <img src={LineSignUp} id="LineSignUp2" />
-        <button type="button" className="Facebook_SignButton" id="SignUp">Sign Up With Facebook</button>
-        <button type="button" className="Google_SignButton" id="SignUp">Sign Up With Google</button>
-        <button type="button" className="SignButton" id="SignUp">SIGN UP</button>
-        <h1 className="Create_your_account_txt">Create your account to embark on your educational adventure</h1>
-        <h1 className="SignTextTitle" id="SignUp">SIGN UP</h1>
-        <h1 className="SignTxtLink" id="SignUp">Already have an Account? <a href="#" className="SigningLink" id="SignUp">Sign In</a>.</h1>
-        <h1 id="OrSignUpWith">Or Sign Up With</h1>
+      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
+        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[65px]" id="Arrow_Signup" />
+        <img src={LineSignUp} class="absolute w-[75px] h-0 left-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
+        <img src={LineSignUp} class="absolute w-[75px] h-0 right-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
+        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[572px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignUp">Sign Up With Facebook</button>
+        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[636px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignUp">Sign Up With Google</button>
+        <button type="button" class="flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[324px] h-[50px] left-[32px] top-[424px] bg-[#007BFF] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#FFFFFF] flex-none order-none flex-grow-0" id="SignUp">SIGN UP</button>
+        <h1 class="absolute w-[319px] h-[65px] left-[34px] top-[97px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[16px] leading-[20px] text-center tracking-[0.02em] capitalize text-[#6C6C6C]">Create your account to embark on your educational adventure</h1>
+        <h1 class="absolute w-[347px] h-[40px] left-[20px] top-[36px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF]" id="SignUp">SIGN UP</h1>
+        <h1 class="absolute w-[225px] h-[15px] left-[81px] top-[700px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[12px] leading-[15px] tracking-[0.02em] text-[#6C6C6C]" id="SignUp">Already have an Account? <a href="#" class="font-bold text-[12px] leading-[15.12px] tracking-[2%] underline [text-decoration-style:solid] text-[#007BFF]" id="SignUp">Sign In</a>.</h1>
+        <h1 class="absolute w-[200px] h-[18px] left-[96.5px] bottom-[292px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[15px] leading-[18px] tracking-[0.02em] text-[#007BFF]">Or Sign Up With</h1>
         <SignUpInputs />
       </header>
     </div>
@@ -40,18 +40,18 @@ function SignUp() {
 function SignIn() {
   return (
     <div className="App">
-      <header className="App-header2">
-        <img src={Arrow} className="Arrow" id="Arrow_SignIn"/>
-        <img src={LineSignUp} id="LineSignUp1" />
-        <img src={LineSignUp} id="LineSignUp2" />
-        <button type="button" className="Facebook_SignButton" id="SignIn">Sign In With Facebook</button>
-        <button type="button" className="Google_SignButton" id="SignIn">Sign In With Google</button>
-        <button type="button" className="SignButton" name="signIn">SIGN IN</button>
-        <h1 className="Create_your_account_txt">Sign in to access your personalized learning journey</h1>
-        <h1 className="SignTextTitle" id="SignIn">SIGN IN</h1>
-        <h1 className="SignTxtLink" id="SignIn">Don't have an Account? <a href="#" className="SigningLink" id="SignIn">Sign Up here</a>.</h1>
-        <h1 id="OrSignUpWith">Or Sign In With</h1>
-        <h1 className="ForgotPassword" id="SignIn">Forgot Password?</h1>
+      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
+        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[65px]" id="Arrow_SignIn" />
+        <img src={LineSignUp} class="absolute w-[75px] h-0 left-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
+        <img src={LineSignUp} class="absolute w-[75px] h-0 right-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
+        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[572px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignIn">Sign In With Facebook</button>
+        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[636px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignIn">Sign In With Google</button>
+        <button type="button" class="flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[324px] h-[50px] left-[32px] top-[390px] bg-[#007BFF] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#FFFFFF] flex-none order-none flex-grow-0" name="signIn">SIGN IN</button>
+        <h1 class="absolute w-[319px] h-[65px] left-[34px] top-[97px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[16px] leading-[20px] text-center tracking-[0.02em] capitalize text-[#6C6C6C]">Sign in to access your personalized learning journey</h1>
+        <h1 class="absolute w-[347px] h-[40px] left-[20px] top-[36px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF]" id="SignIn">SIGN IN</h1>
+        <h1 class="absolute w-[225px] h-[15px] left-[81px] top-[700px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[12px] leading-[15px] tracking-[0.02em] text-[#6C6C6C]" id="SignIn">Don't have an Account? <a href="#" class="font-bold text-[12px] leading-[15.12px] tracking-[2%] underline [text-decoration-style:solid] text-[#007BFF]" id="SignIn">Sign Up here</a>.</h1>
+        <h1 class="absolute w-[200px] h-[18px] left-[96.5px] bottom-[292px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[15px] leading-[18px] tracking-[0.02em] text-[#007BFF]">Or Sign In With</h1>
+        <h1 class="absolute w-[120px] h-[14px] left-[237px] top-[326px] font-['Plus_Jakarta_Sans'] not-italic font-semibold text-[12px] leading-[14px] tracking-[0.02em] text-[#6C6C6C]" id="SignIn">Forgot Password?</h1>
         <SignInInputs />
       </header>
     </div>
@@ -61,13 +61,13 @@ function SignIn() {
 function SignUpInputs() {
   return (
     <>
-      <header className="SignUp-Header">
-        <h1 className="Email_INPUT" id="SignUp">Email</h1>
-        <h1 className="Password_INPUT" id="SignUp">Password</h1>
-        <h1 id="ConfirmPassword_SU">Confirm Password</h1>
-        <input className="EmailBox_Input" id="SignUp" placeholder="Enter your email" />
-        <input className="PasswordBox_Input" id="SignUp" placeholder="Enter your password" />
-        <input id="ConfirmPasswordSignUp_Input" placeholder="Confirm your password" />
+      <header class="font-['Plus_Jakarta_Sans'] not-italic font-semibold text-[14px] leading-[16px] tracking-[0.02em] text-[#007BFF]">
+        <h1 class="absolute w-[35px] h-[16px] left-[35px] top-[171px]" id="SignUp">Email</h1>
+        <h1 class="absolute w-[63px] h-[16px] left-[35px] top-[252px]" id="SignUp">Password</h1>
+        <h1 class="absolute w-[126px] h-[16px] left-[32px] top-[330px]">Confirm Password</h1>
+        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[195px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignUp" placeholder="Enter your email" />
+        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[278px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignUp" placeholder="Enter your password" />
+        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[357px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" placeholder="Confirm your password" />
       </header>
     </>
   );
@@ -76,11 +76,11 @@ function SignUpInputs() {
 function SignInInputs() {
   return (
     <>
-      <header className="SignUp-Header">
-        <h1 className="Email_INPUT" id="SignIn">Email</h1>
-        <h1 className="Password_INPUT" id="SignIn">Password</h1>
-        <input className="EmailBox_Input" id="SignIn" placeholder="Enter your email" />
-        <input className="PasswordBox_Input" id="SignIn" placeholder="Enter your password" />
+      <header class="font-['Plus_Jakarta_Sans'] not-italic font-medium text-[14px] leading-[16px] tracking-[0.02em] text-[#007BFF]">
+        <h1 class="absolute w-[35px] h-[16px] left-[35px] top-[171px]" id="SignIn">Email</h1>
+        <h1 class="absolute w-[63px] h-[16px] left-[35px] top-[252px]" id="SignIn">Password</h1>
+        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[195px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignIn" placeholder="Enter your email" />
+        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[278px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignIn" placeholder="Enter your password" />
       </header>
     </>
   );
@@ -90,8 +90,8 @@ function SignInInputs() {
 function W1() {
   return (
     <div className="App">
-      <header className="App-header2">
-        <img src={Arrow} className="Arrow" id="Arrow_W1"/>
+      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
+        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[65px]" id="Arrow_W1" />
         <div class="Ellipse" id="Ellipse-1"></div>
         <div class="Ellipse" id="Ellipse-2"></div>
         <div class="Ellipse" id="Ellipse-3"></div>
@@ -120,8 +120,8 @@ function P1() {
 
   return (
     <>
-      <header className="App-header2">
-        <img src={Group16} className="Group16"/>
+      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
+        <img src={Group16} className="Group16" />
         <h1 id="P1_Txt">Unlock Your Learning Potential</h1>
         <button type="button" className="SignInButton-P1" onClick={SignInClick}>SIGN IN</button>
         <button type="button" className="SignUpButton-P1" onClick={SignUpClick}>SIGN UP</button>
@@ -135,8 +135,9 @@ function TestPage() {
   return (
     <div className="App">
       <header className="App-header3">
-
-
+        <h1 class="text-3xl font-bold underline">
+          Hello world!
+        </h1>
       </header>
     </div>
   );
