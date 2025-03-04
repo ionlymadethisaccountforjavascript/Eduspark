@@ -385,7 +385,7 @@
 } */
 
 /* Question page */
-.Question {
+/* .Question {
   position: absolute;
   width: 347px;
   height: 40px;
@@ -400,9 +400,9 @@
   letter-spacing: 0.05em;
 
   color: #005965;
-}
+} */
 
-.Some-Question {
+/* .Some-Question {
   position: absolute;
   width: 347px;
   height: 40px;
@@ -417,9 +417,9 @@
   letter-spacing: 0.05em;
 
   color: #007BFF;
-}
+} */
 
-.Back {
+/* .Back {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -444,9 +444,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
-.Submit {
+/* .Submit {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -471,12 +471,14 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
-.options {
+/* .options {
   position: absolute;
   width: 318px;
   height: 84px;
+  top: 361px;
+  left: 38px;
   background: #007BFF;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
@@ -485,15 +487,15 @@
   line-height: 20px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-}
+} */
 
-#option1 {
+/* #option1 {
   position: absolute;
   top: 256px;
   left: 38px;
-}
+} */
 
-#option2 {
+/* #option2 {
   position: absolute;
   top: 361px;
   left: 38px;
@@ -509,22 +511,22 @@
   position: absolute;
   top: 571px;
   left: 38px;
-}
+} */
 
-.Ellipse {
+/* .Ellipse {
   position: absolute;
   width: 9px;
   height: 9px;
   top: 693px;
   border-radius: 50%;
-}
+} */
 
-#Ellipse-1 {
+/* #Ellipse-1 {
   left: 168px;
   background-color: #000000;
-}
+} */
 
-#Ellipse-2 {
+/* #Ellipse-2 {
   left: 181px;
   background-color: #C5C5C5;
 }
@@ -537,18 +539,18 @@
 #Ellipse-4 {
   left: 207px;
   background-color: #C5C5C5;
-}
+} */
 
 /* P1 (PopUp1) Page */
-.Group16 {
+/* .Group16 {
   position: absolute;
   width: 277px;
   height: 361.63px;
   left: calc(50% - 277px/2 + 0.5px);
   top: 64px;
-}
+} */
 
-#P1_Txt {
+/* #P1_Txt {
   position: absolute;
   width: 300px;
   height: 98px;
@@ -563,9 +565,9 @@
   letter-spacing: 0.05em;
   color: #007BFF;
   text-shadow: 0px 1px, 1px 0px, 1px 1px;
-}
+} */
 
-.SignInButton-P1 {
+/* .SignInButton-P1 {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -593,9 +595,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
-.SignUpButton-P1 {
+/* .SignUpButton-P1 {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -622,7 +624,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
+} */
 
 /* SignIn page */
 /* .ForgotPassword {
