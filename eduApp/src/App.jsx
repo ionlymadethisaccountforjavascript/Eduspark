@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import EduLogo from "./assets/LoadingPage/Logo.png";
 import Arrow from "./assets/SignUpPage/arrow-left-line.png";
+import Arrow2 from "./assets/GradeSelecter/arrow-left-line2.png";
 import LineSignUp from "./assets/SignUpPage/LineSignUp.png";
 import Group16 from "./assets/FirstPopUp/Group16.png";
+import SelectedSign from "./assets/GradeSelecter/Check.png";
 import "./App.css";
 
 function LoadingPage() {
@@ -147,6 +149,26 @@ function ResetPassword() {
   );
 }
 
+function GradeSelecter() {
+  return (
+    <div className="App">
+      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
+        <button id="Grade6" class="absolute w-[349px] h-[81px] left-[21px] top-[127px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 6</button>
+        <button id="Grade7" class="absolute w-[349px] h-[81px] left-[21px] top-[227px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 7</button>
+        <button id="Grade8" class="absolute w-[349px] h-[81px] left-[21px] top-[327px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 8</button>
+        <button id="Grade9" class="absolute w-[349px] h-[81px] left-[21px] top-[427px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 9</button>
+        <button id="Grade10" class="absolute w-[349px] h-[81px] left-[21px] top-[527px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 10</button>
+        <button id="Grade11" class="absolute w-[349px] h-[81px] left-[21px] top-[627px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 11</button>
+        <button id="Grade12" class="absolute w-[349px] h-[81px] left-[21px] top-[727px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 12</button>
+        <img src={SelectedSign} class="absolute left-[46px] top-[159px]" />
+        <h1 class="[text-shadow:0px_0.45px] absolute w-[72px] h-[28px] left-[55px] top-[60px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[22px] leading-[28px] tracking-wider text-[#007BFF]">Grade</h1>
+        <img src={Arrow2} class="absolute w-[24px] h-[24px] left-[17px] top-[63px]" />
+      </header>
+    </div>
+  );
+}
+
+
 function TestPage() {
   return (
     <div className="App">
@@ -169,6 +191,7 @@ function App() {
         <Route path="/W1" element={<W1 />} />
         <Route path="/P1" element={<P1 />} />
         <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/GradeSelecter" element={<GradeSelecter />}/>
         <Route path="/test" element={<TestPage />} />
       </Routes>
     </Router>
