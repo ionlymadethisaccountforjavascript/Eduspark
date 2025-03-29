@@ -11,50 +11,92 @@ import "./App.css";
 function LoadingPage() {
   return (
     <div className="App">
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 bg-[#007BFF]">
-        <h1 class="[text-shadow:0px_1px,_1px_0px,_1px_1px] absolute w-[347px] h-[40px] left-[24px] top-[422px] font-['Plus_Jakarta_Sans'] not-italic font-black text-[32px] leading-[40px] text-center tracking-wider text-[#FFFFFF] border-[1px] border-[solid] border-[#007BFF]">EduSpark</h1>
-        <img src={EduLogo} class="absolute w-[168.2px] h-[108px] left-[111px] top-[314px]" alt="EduSpark Logo" />
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#007BFF] flex flex-col items-center justify-center">
+        <div className="relative w-full max-w-md px-4">
+          <img 
+            src={EduLogo} 
+            className="w-20 md:w-24 mx-auto mb-8" 
+            alt="EduSpark Logo" 
+          />
+          <h1 className="text-4xl md:text-5xl font-black text-center text-white font-['Plus_Jakarta_Sans'] tracking-wider">
+            EduSpark
+          </h1>
+        </div>
       </header>
     </div>
   );
 }
 
 function SignUp() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
-        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[45px]" id="Arrow_Signup" />
-        <img src={LineSignUp} class="absolute w-[75px] h-0 left-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
-        <img src={LineSignUp} class="absolute w-[75px] h-0 right-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
-        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[572px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignUp">Sign Up With Facebook</button>
-        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[636px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignUp">Sign Up With Google</button>
-        <button type="button" class="flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[324px] h-[50px] left-[32px] top-[424px] bg-[#007BFF] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#FFFFFF] flex-none order-none flex-grow-0" id="SignUp">SIGN UP</button>
-        <h1 class="absolute w-[319px] h-[65px] left-[34px] top-[97px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[16px] leading-[20px] text-center tracking-[0.02em] capitalize text-[#6C6C6C]">Create your account to embark on your educational adventure</h1>
-        <h1 class="[text-shadow:0px_1px,_1px_0px,_1px_1px] absolute w-[347px] h-[40px] left-[20px] top-[36px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF]" id="SignUp">SIGN UP</h1>
-        <h1 class="absolute w-[225px] h-[15px] left-[81px] top-[700px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[12px] leading-[15px] tracking-[0.02em] text-[#6C6C6C]" id="SignUp">Already have an Account? <a href="#" class="font-bold text-[12px] leading-[15.12px] tracking-[2%] underline [text-decoration-style:solid] text-[#007BFF]" id="SignUp">Sign In</a>.</h1>
-        <h1 class="absolute w-[200px] h-[18px] left-[96.5px] bottom-[292px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[15px] leading-[18px] tracking-[0.02em] text-[#007BFF]">Or Sign Up With</h1>
-        <SignUpInputs />
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+        <img 
+          src={Arrow} 
+          className="absolute w-6 h-6 left-5 top-12 cursor-pointer transition duration-400 hover:opacity-70 animate-fade-in" 
+          onClick={() => navigate(-1)}
+          alt="Back"
+        />
+        <div className="flex flex-col items-center justify-center min-h-screen p-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#007BFF] mb-8 animate-slide-down">SIGN UP</h1>
+          <p className="text-center text-gray-600 mb-8 max-w-md animate-slide-down animation-delay-100">Create your account to embark on your educational adventure</p>
+          
+          <div className="w-full max-w-md animate-slide-down animation-delay-200">
+            <SignUpInputs />
+          </div>
+          
+          <button type="button" className="w-full max-w-md py-4 px-6 bg-[#007BFF] text-white rounded-lg font-medium uppercase mb-4 transition duration-400 hover:bg-[#0056b3] animate-slide-down animation-delay-300">SIGN UP</button>
+          
+          <div className="flex items-center justify-center w-full max-w-md mb-8 animate-slide-down animation-delay-400">
+            <div className="flex-1 border-t border-gray-400"></div>
+            <span className="px-4 text-[#007BFF] font-extrabold">Or Sign Up With</span>
+            <div className="flex-1 border-t border-gray-400"></div>
+          </div>
+          
+          <button type="button" className="w-full max-w-md py-4 px-6 border border-[#007BFF] text-[#007BFF] bg-white rounded-lg font-bold mb-4 transition duration-400 hover:bg-gray-100 animate-slide-down animation-delay-500">Sign Up With Facebook</button>
+          <button type="button" className="w-full max-w-md py-4 px-6 border border-[#007BFF] text-[#007BFF] bg-white rounded-lg font-bold mb-4 transition duration-400 hover:bg-gray-100 animate-slide-down animation-delay-600">Sign Up With Google</button>
+          
+          <p className="text-sm text-gray-600 animate-slide-down animation-delay-700">Already have an Account? <a href="#" className="font-bold text-[#007BFF] underline transition duration-400 hover:text-[#0056b3]">Sign In</a></p>
+        </div>
       </header>
     </div>
   );
 }
 
 function SignIn() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
-        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[55px]" id="Arrow_SignIn" />
-        <img src={LineSignUp} class="absolute w-[75px] h-0 left-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
-        <img src={LineSignUp} class="absolute w-[75px] h-0 right-[45px] top-[534px] border-[1px] border-[solid] border-[#6C6C6C] rotate-180" />
-        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[582px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignIn">Sign In With Facebook</button>
-        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] bg-[#ffffff] absolute w-[317px] h-[49px] left-[37px] top-[646px] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[16px] leading-[20px] tracking-[0.02em] capitalize text-[#007BFF] flex-none order-none flex-grow-0" id="SignIn">Sign In With Google</button>
-        <button type="button" class="flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[324px] h-[50px] left-[32px] top-[380px] bg-[#007BFF] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#FFFFFF] flex-none order-none flex-grow-0" name="signIn">SIGN IN</button>
-        <h1 class="absolute w-[319px] h-[65px] left-[34px] top-[116px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[16px] leading-[20px] text-center tracking-[0.02em] capitalize text-[#6C6C6C]">Sign in to access your personalized learning journey</h1>
-        <h1 class="[text-shadow:0px_1px,_1px_0px,_1px_1px] absolute w-[347px] h-[40px] left-[20px] top-[55px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF]" id="SignIn">SIGN IN</h1>
-        <h1 class="absolute w-[225px] h-[15px] left-[81px] top-[710px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[12px] leading-[15px] tracking-[0.02em] text-[#6C6C6C]" id="SignIn">Don't have an Account? <a href="#" class="font-bold text-[12px] leading-[15.12px] tracking-[2%] underline [text-decoration-style:solid] text-[#007BFF]" id="SignIn">Sign Up here</a>.</h1>
-        <h1 class="absolute w-[200px] h-[18px] left-[96.5px] bottom-[292px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[15px] leading-[18px] tracking-[0.02em] text-[#007BFF]">Or Sign In With</h1>
-        <h1 class="absolute w-[120px] h-[14px] left-[237px] top-[336px] font-['Plus_Jakarta_Sans'] not-italic font-semibold text-[12px] leading-[14px] tracking-[0.02em] text-[#6C6C6C]" id="SignIn">Forgot Password?</h1>
-        <SignInInputs />
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+        <img 
+          src={Arrow} 
+          className="absolute w-6 h-6 left-5 top-14 cursor-pointer transition duration-400 hover:opacity-70 animate-fade-in" 
+          onClick={() => navigate(-1)}
+          alt="Back"
+        />
+        <div className="flex flex-col items-center justify-center min-h-screen p-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#007BFF] mb-8 animate-slide-down">SIGN IN</h1>
+          <p className="text-center text-gray-600 mb-8 max-w-md animate-slide-down animation-delay-100">Sign in to access your personalized learning journey</p>
+          
+          <div className="w-full max-w-md animate-slide-down animation-delay-200">
+            <SignInInputs />
+          </div>
+          
+          <button type="button" className="w-full max-w-md py-4 px-6 bg-[#007BFF] text-white rounded-lg font-medium uppercase mb-4 transition duration-400 hover:bg-[#0056b3] animate-slide-down animation-delay-300">SIGN IN</button>
+          
+          <div className="flex items-center justify-center w-full max-w-md mb-8 animate-slide-down animation-delay-400">
+            <div className="flex-1 border-t border-gray-400"></div>
+            <span className="px-4 text-[#007BFF] font-extrabold">Or Sign In With</span>
+            <div className="flex-1 border-t border-gray-400"></div>
+          </div>
+          
+          <button type="button" className="w-full max-w-md py-4 px-6 border border-[#007BFF] text-[#007BFF] bg-white rounded-lg font-bold mb-4 transition duration-400 hover:bg-gray-100 animate-slide-down animation-delay-500">Sign In With Facebook</button>
+          <button type="button" className="w-full max-w-md py-4 px-6 border border-[#007BFF] text-[#007BFF] bg-white rounded-lg font-bold mb-4 transition duration-400 hover:bg-gray-100 animate-slide-down animation-delay-600">Sign In With Google</button>
+          
+          <p className="text-sm text-gray-600 animate-slide-down animation-delay-700">Don't have an Account? <a href="#" className="font-bold text-[#007BFF] underline transition duration-400 hover:text-[#0056b3]">Sign Up here</a></p>
+          <p className="text-sm text-gray-600 mt-4 cursor-pointer transition duration-400 hover:text-[#0056b3] animate-slide-down animation-delay-800">Forgot Password?</p>
+        </div>
       </header>
     </div>
   );
@@ -62,49 +104,73 @@ function SignIn() {
 
 function SignUpInputs() {
   return (
-    <>
-      <header class="font-['Plus_Jakarta_Sans'] not-italic font-semibold text-[14px] leading-[16px] tracking-[0.02em] text-[#007BFF]">
-        <h1 class="absolute w-[35px] h-[16px] left-[35px] top-[171px]" id="SignUp">Email</h1>
-        <h1 class="absolute w-[63px] h-[16px] left-[35px] top-[252px]" id="SignUp">Password</h1>
-        <h1 class="absolute w-[126px] h-[16px] left-[32px] top-[330px]">Confirm Password</h1>
-        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[195px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignUp" placeholder="Enter your email" />
-        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[278px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignUp" placeholder="Enter your password" />
-        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[357px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" placeholder="Confirm your password" />
-      </header>
-    </>
+    <div className="w-full space-y-6 mb-8">
+      <div>
+        <label className="block text-[#007BFF] font-semibold mb-2">Email</label>
+        <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="Enter your email" />
+      </div>
+      <div>
+        <label className="block text-[#007BFF] font-semibold mb-2">Password</label>
+        <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="Enter your password" />
+      </div>
+      <div>
+        <label className="block text-[#007BFF] font-semibold mb-2">Confirm Password</label>
+        <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="Confirm your password" />
+      </div>
+    </div>
   );
 }
 
 function SignInInputs() {
   return (
-    <>
-      <header class="font-['Plus_Jakarta_Sans'] not-italic font-medium text-[14px] leading-[16px] tracking-[0.02em] text-[#007BFF]">
-        <h1 class="absolute w-[35px] h-[16px] left-[35px] top-[171px]" id="SignIn">Email</h1>
-        <h1 class="absolute w-[63px] h-[16px] left-[35px] top-[252px]" id="SignIn">Password</h1>
-        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[195px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignIn" placeholder="Enter your email" />
-        <input class="flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[31px] top-[278px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[15px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="SignIn" placeholder="Enter your password" />
-      </header>
-    </>
+    <div className="w-full space-y-6 mb-8">
+      <div>
+        <label className="block text-[#007BFF] font-medium mb-2">Email</label>
+        <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="Enter your email" />
+      </div>
+      <div>
+        <label className="block text-[#007BFF] font-medium mb-2">Password</label>
+        <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="Enter your password" />
+      </div>
+    </div>
   );
 }
 
-
 function W1() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
-        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[65px]" id="Arrow_W1" />
-        <div class="absolute w-[9px] h-[9px] top-[693px] rounded-[50%] left-[168px] bg-[#000000]" id="Ellipse-1"></div>
-        <div class="absolute w-[9px] h-[9px] top-[693px] rounded-[50%] left-[181px] bg-[#C5C5C5]" id="Ellipse-2"></div>
-        <div class="absolute w-[9px] h-[9px] top-[693px] rounded-[50%] left-[194px] bg-[#C5C5C5]" id="Ellipse-3"></div>
-        <div class="absolute w-[9px] h-[9px] top-[693px] rounded-[50%] left-[207px] bg-[#C5C5C5]" id="Ellipse-4"></div>
-        <h1 class="absolute w-[347px] h-[40px] left-[25px] top-[105px] font-['Plus_Jakarta_Sans'] not-italic font-[1000] text-[32px] leading-[40px] text-center tracking-wider text-[#005965]">Question:</h1>
-        <h1 class="absolute w-[347px] h-[40px] left-[25px] top-[164px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF]">“Some question”</h1>
-        <button type="button" class="flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[225px] h-[50px] left-[83px] top-[741px] bg-[#000000] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#FFFFFF] flex-none order-none flex-grow-0">Back</button>
-        <button type="button" class="absolute w-[318px] h-[84px] top-[256px] left-[38px] bg-[#007BFF] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[16px] leading-[20px] tracking-[0.02em] uppercase" id="option1">OPTION 1</button>
-        <button type="button" class="absolute w-[318px] h-[84px] top-[361px] left-[38px] bg-[#007BFF] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[16px] leading-[20px] tracking-[0.02em] uppercase" id="option2">OPTION 2</button>
-        <button type="button" class="absolute w-[318px] h-[84px] top-[466px] left-[38px] bg-[#007BFF] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[16px] leading-[20px] tracking-[0.02em] uppercase" id="option3">OPTION 3</button>
-        <button type="button" class="absolute w-[318px] h-[84px] top-[571px] left-[38px] bg-[#007BFF] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[16px] leading-[20px] tracking-[0.02em] uppercase" id="option4">OPTION 4</button>
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+        <img 
+          src={Arrow} 
+          className="absolute w-6 h-6 left-5 top-16 cursor-pointer transition duration-400 hover:opacity-70" 
+          onClick={() => navigate(-1)}
+          alt="Back"
+        />
+        <div className="flex flex-col items-center justify-between min-h-screen p-4">
+          <div className="w-full flex flex-col items-center">
+            <h1 className="text-4xl font-extrabold text-[#005965] mb-8">Question:</h1>
+            <h2 className="text-4xl font-extrabold text-[#007BFF] mb-12">"Some question"</h2>
+            
+            <div className="w-full max-w-md space-y-4">
+              <button className="w-full py-6 bg-[#007BFF] text-white font-extrabold uppercase rounded-lg transition duration-400 hover:bg-[#0056b3]">OPTION 1</button>
+              <button className="w-full py-6 bg-[#007BFF] text-white font-extrabold uppercase rounded-lg transition duration-400 hover:bg-[#0056b3]">OPTION 2</button>
+              <button className="w-full py-6 bg-[#007BFF] text-white font-extrabold uppercase rounded-lg transition duration-400 hover:bg-[#0056b3]">OPTION 3</button>
+              <button className="w-full py-6 bg-[#007BFF] text-white font-extrabold uppercase rounded-lg transition duration-400 hover:bg-[#0056b3]">OPTION 4</button>
+            </div>
+          </div>
+          
+          <div className="w-full flex flex-col items-center space-y-6">
+            <div className="flex justify-center space-x-2">
+              <div className="w-2 h-2 bg-black rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+            
+            <button className="w-full max-w-md py-4 bg-black text-white rounded-lg font-medium uppercase transition duration-400 hover:bg-gray-800">Back</button>
+          </div>
+        </div>
       </header>
     </div>
   );
@@ -121,53 +187,92 @@ function P1() {
   };
 
   return (
-    <>
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
-        <img src={Group16} class="absolute w-[277px] h-[361.63px] left-[57px] top-[64px]" />
-        <h1 class="absolute w-[300px] h-[98px] left-[45px] top-[490px] font-['Plus_Jakarta_Sans'] not-italic font-[1200] text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF] [text-shadow:0px_1px,_1px_0px,_1px_1px]">Unlock Your Learning Potential</h1>
-        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[160px] h-[50px] left-[32px] top-[630px] bg-[#007BFF] border-[1px] border-[solid] border-[#007BFF] [box-shadow:0px_2px_8px_rgba(0,_67,_76,_0.25)] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-semibold text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#D9EFF2] flex-none order-none flex-grow-0" onClick={SignInClick}>SIGN IN</button>
-        <button type="button" class="box-border flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[160px] h-[50px] left-[207px] top-[630px] bg-[#ffffff] border-[1px] border-[solid] border-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-semibold text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#00434C] flex-none order-none flex-grow-0" onClick={SignUpClick}>SIGN UP</button>
-      </header>
-    </>
+    <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <div className="w-full max-w-md flex flex-col items-center">
+          <img src={Group16} className="w-48 md:w-56 mb-12" alt="Welcome Illustration" />
+          <h1 className="text-3xl md:text-4xl font-extrabold text-[#007BFF] text-center mb-16">
+            Unlock Your Learning Potential
+          </h1>
+          
+          <div className="flex flex-col md:flex-row gap-4 w-full">
+            <button 
+              onClick={SignInClick} 
+              className="flex-1 py-4 px-6 bg-[#007BFF] text-white rounded-lg font-semibold uppercase shadow-lg transition duration-400 hover:bg-[#0056b3]"
+            >
+              SIGN IN
+            </button>
+            <button 
+              onClick={SignUpClick} 
+              className="flex-1 py-4 px-6 border border-[#007BFF] text-[#00434C] bg-white rounded-lg font-semibold uppercase transition duration-400 hover:bg-gray-100"
+            >
+              SIGN UP
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
 
 function ResetPassword() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
-        <img src={Arrow} class="absolute w-[24px] h-[24px] left-[21px] top-[54px]" id="Arrow_W1" />
-        <h1 class="[text-shadow:0px_1px,_1px_0px,_1px_1px] absolute w-[347px] h-[40px] left-[23px] top-[153px] font-['Plus_Jakarta_Sans'] not-italic font-extrabold text-[32px] leading-[40px] text-center tracking-wider text-[#007BFF]">Reset Password</h1>
-        <h1 class="[text-shadow:0px_0.3px] absolute w-[319px] h-[65px] left-[37px] top-[214px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[16px] leading-[20px] text-center tracking-[0.02em] capitalize text-[#6C6C6C]">Reset your password to regain access to your learning journey</h1>
-        <h1 class="[text-shadow:0px_0.4px] absolute w-[95px] h-[16px] left-[37px] top-[295px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[13px] leading-[16px] tracking-[0.02em] text-[#007BFF]" >New Password</h1>
-        <input class="[text-shadow:0px_0.4px] flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[37px] top-[321px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[12px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="NewPasswordBox" placeholder="New Password" />
-        <h1 class="[text-shadow:0px_0.4px] absolute w-[117px] h-[16px] left-[37px] top-[373px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[13px] leading-[16px] tracking-[0.02em] text-[#007BFF]" >Confirm Password</h1>
-        <input class="[text-shadow:0px_0.4px] flex flex-row items-center p-[10px] gap-[138px] absolute w-[320px] h-[35px] left-[37px] top-[399px] border-[1px] border-[solid] border-[#6C6C6C] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-normal text-[12px] leading-[15px] tracking-[0.02em] text-[#6C6C6C] flex-none order-none flex-grow-0" id="NewPasswordBox" placeholder="Confirm Password" />
-        <button type="button" class="flex flex-row justify-center items-center p-[15px] gap-[10px] absolute w-[320px] h-[50px] left-[37px] top-[478px] bg-[#007BFF] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-medium text-[16px] leading-[20px] tracking-[0.02em] uppercase text-[#FFFFFF] flex-none order-none flex-grow-0">SAVE</button>
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+        <img 
+          src={Arrow} 
+          className="absolute w-6 h-6 left-5 top-14 cursor-pointer transition duration-400 hover:opacity-70" 
+          onClick={() => navigate(-1)}
+          alt="Back"
+        />
+        <div className="flex flex-col items-center justify-center min-h-screen p-4">
+          <h1 className="text-4xl font-extrabold text-[#007BFF] text-center mb-8">Reset Password</h1>
+          <p className="text-center text-gray-600 mb-12 max-w-md">Reset your password to regain access to your learning journey</p>
+          
+          <div className="w-full max-w-md space-y-6">
+            <div>
+              <label className="block text-[#007BFF] font-medium mb-2">New Password</label>
+              <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="New Password" />
+            </div>
+            <div>
+              <label className="block text-[#007BFF] font-medium mb-2">Confirm Password</label>
+              <input className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:border-gray-300 transition duration-400" placeholder="Confirm Password" />
+            </div>
+            <button className="w-full py-4 bg-[#007BFF] text-white rounded-lg font-medium uppercase transition duration-400 hover:bg-[#0056b3]">SAVE</button>
+          </div>
+        </div>
       </header>
     </div>
   );
 }
 
 function GradeSelecter() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-      <header class="absolute w-[390px] h-[844px] left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgb(0,_0,_0)] bg-[#ffffff]">
-        <button id="Grade6" class="absolute w-[349px] h-[81px] left-[21px] top-[127px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 6</button>
-        <button id="Grade7" class="absolute w-[349px] h-[81px] left-[21px] top-[227px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 7</button>
-        <button id="Grade8" class="absolute w-[349px] h-[81px] left-[21px] top-[327px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 8</button>
-        <button id="Grade9" class="absolute w-[349px] h-[81px] left-[21px] top-[427px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 9</button>
-        <button id="Grade10" class="absolute w-[349px] h-[81px] left-[21px] top-[527px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 10</button>
-        <button id="Grade11" class="absolute w-[349px] h-[81px] left-[21px] top-[627px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 11</button>
-        <button id="Grade12" class="absolute w-[349px] h-[81px] left-[21px] top-[727px] bg-[#F0F0F0] rounded-[5px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[14px] leading-[18px] text-center tracking-[0.02em] text-[#007BFF]">GRADE 12</button>
-        <img src={SelectedSign} class="absolute left-[46px] top-[159px]" />
-        <h1 class="[text-shadow:0px_0.45px] absolute w-[72px] h-[28px] left-[55px] top-[60px] font-['Plus_Jakarta_Sans'] not-italic font-bold text-[22px] leading-[28px] tracking-wider text-[#007BFF]">Grade</h1>
-        <img src={Arrow2} class="absolute w-[24px] h-[24px] left-[17px] top-[63px]" />
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+        <div className="flex items-center p-4 mb-8">
+          <img 
+            src={Arrow2} 
+            className="w-6 h-6 mr-4 cursor-pointer transition duration-400 hover:opacity-70" 
+            onClick={() => navigate(-1)}
+            alt="Back"
+          />
+          <h1 className="text-2xl font-bold text-[#007BFF]">Grade</h1>
+        </div>
+        
+        <div className="flex flex-col items-center p-4 space-y-4">
+          {[6, 7, 8, 9, 10, 11, 12].map((grade) => (
+            <button key={grade} className="w-full max-w-md py-6 bg-[#F0F0F0] rounded-lg font-bold text-[#007BFF] transition duration-400 hover:bg-gray-200">
+              GRADE {grade}
+            </button>
+          ))}
+        </div>
       </header>
     </div>
   );
 }
-
 
 function TestPage() {
   return (
@@ -211,5 +316,75 @@ function LoadingPageWithRedirect() {
 
   return <LoadingPage />;
 }
+
+// Add these styles at the end of the file, before the export
+const styles = `
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+
+.animation-delay-800 {
+  animation-delay: 800ms;
+}
+`;
+
+// Add the styles to the document
+const styleSheet = document.createElement("style");
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
 
 export default App;
