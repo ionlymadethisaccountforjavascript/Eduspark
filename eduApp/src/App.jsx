@@ -11,16 +11,19 @@ import "./App.css";
 function LoadingPage() {
   return (
     <div className="App">
-      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#007BFF] flex flex-col items-center justify-center">
-        <div className="relative w-full max-w-md px-4">
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#007BFF] flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center h-full w-full max-w-md px-4">
           <img 
             src={EduLogo} 
-            className="w-20 md:w-24 mx-auto mb-8" 
+            className="w-20 md:w-24 mx-auto mb-8 animate-pulse" 
             alt="EduSpark Logo" 
           />
-          <h1 className="text-4xl md:text-5xl font-black text-center text-white font-['Plus_Jakarta_Sans'] tracking-wider">
+          <h1 className="text-4xl md:text-5xl font-black text-center text-white font-['Plus_Jakarta_Sans'] tracking-wider animate-pulse animation-delay-200">
             EduSpark
           </h1>
+        </div>
+        <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-24 h-2 bg-white/30 rounded-full overflow-hidden">
+          <div className="w-full h-full bg-white animate-loading-bar"></div>
         </div>
       </header>
     </div>
@@ -94,7 +97,7 @@ function SignIn() {
           <button type="button" className="w-full max-w-md py-4 px-6 border border-[#007BFF] text-[#007BFF] bg-white rounded-lg font-bold mb-4 transition duration-400 hover:bg-gray-100 animate-slide-down animation-delay-500">Sign In With Facebook</button>
           <button type="button" className="w-full max-w-md py-4 px-6 border border-[#007BFF] text-[#007BFF] bg-white rounded-lg font-bold mb-4 transition duration-400 hover:bg-gray-100 animate-slide-down animation-delay-600">Sign In With Google</button>
           
-          <p className="text-sm text-gray-600 animate-slide-down animation-delay-700">Don't have an Account? <a href="#" className="font-bold text-[#007BFF] underline transition duration-400 hover:text-[#0056b3]">Sign Up here</a></p>
+          <p className="text-sm text-gray-600 animate-slide-down animation-delay-700">Don't have an Account? <span onClick={() => navigate('/SignUp')} className="font-bold text-[#007BFF] underline cursor-pointer transition duration-400 hover:text-[#0056b3]">Sign Up here</span></p>
           <p className="text-sm text-gray-600 mt-4 cursor-pointer transition duration-400 hover:text-[#0056b3] animate-slide-down animation-delay-800">Forgot Password?</p>
         </div>
       </header>
@@ -317,7 +320,7 @@ function LoadingPageWithRedirect() {
   return <LoadingPage />;
 }
 
-// Add these styles at the end of the file, before the export
+// Update the styles section
 const styles = `
 @keyframes slideDown {
   from {
@@ -339,6 +342,15 @@ const styles = `
   }
 }
 
+@keyframes loadingBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-slide-down {
   animation: slideDown 0.5s ease-out forwards;
   opacity: 0;
@@ -347,6 +359,23 @@ const styles = `
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
   opacity: 0;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-loading-bar {
+  animation: loadingBar 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .animation-delay-100 {
