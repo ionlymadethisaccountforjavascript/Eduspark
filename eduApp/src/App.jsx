@@ -289,6 +289,91 @@ function TestPage() {
   );
 }
 
+function Profile() {
+  const navigate = useNavigate();
+  
+  // Example user data - in a real app, this would come from your auth/state management
+  const userData = {
+    name: "John Doe",
+    grade: "Grade 8",
+    profileImage: null // placeholder for profile image
+  };
+
+  const menuItems = [
+    {
+      icon: "📚", // You should replace these with actual icons
+      label: "Change grade",
+      action: () => navigate('/GradeSelecter')
+    },
+    {
+      icon: "📝",
+      label: "My Topics",
+      action: () => navigate('/topics')
+    },
+    {
+      icon: "🎧",
+      label: "Help Center",
+      action: () => navigate('/help')
+    },
+    {
+      icon: "🚪",
+      label: "Log out",
+      action: () => {
+        // Add logout logic here
+        navigate('/');
+      }
+    }
+  ];
+
+  return (
+    <div className="App">
+      <header className="absolute w-full h-screen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white">
+        <div className="flex flex-col h-full p-6">
+          {/* Header */}
+          <h1 className="text-2xl font-bold text-[#007BFF] mb-6">My Profile</h1>
+
+          {/* Profile Section */}
+          <div className="flex items-center mb-8">
+            <div className="w-20 h-20 bg-gray-200 rounded-full mr-4"></div>
+            <div>
+              <h2 className="text-lg font-semibold">{userData.name}</h2>
+              <p className="text-gray-600">{userData.grade}</p>
+            </div>
+            <button 
+              className="ml-auto text-[#007BFF]"
+              onClick={() => navigate('/edit-profile')}
+            >
+              ✏️
+            </button>
+          </div>
+
+          {/* Menu Items */}
+          <div className="flex-1">
+            {menuItems.map((item, index) => (
+              <button
+                key={index}
+                onClick={item.action}
+                className="w-full flex items-center py-4 px-2 border-b border-gray-100 text-left transition duration-300 hover:bg-gray-50"
+              >
+                <span className="w-8">{item.icon}</span>
+                <span className="flex-1 text-[#00434C]">{item.label}</span>
+                <span className="text-gray-400">›</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Footer */}
+          <div className="mt-auto pb-6 text-center text-sm text-gray-500">
+            <a href="/privacy" className="hover:text-[#007BFF]">Privacy Policy</a>
+            <span className="mx-2">·</span>
+            <a href="/terms" className="hover:text-[#007BFF]">Terms and Conditions</a>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -301,6 +386,7 @@ function App() {
         <Route path="/ResetPassword" element={<ResetPassword />} />
         <Route path="/GradeSelecter" element={<GradeSelecter />}/>
         <Route path="/test" element={<TestPage />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
